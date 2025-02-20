@@ -328,7 +328,7 @@ def start_command(message):
     myinfo_button = types.KeyboardButton("👤 My Info")
     redeem_button = types.KeyboardButton("🎟️ Redeem Key")
     markup.add(attack_button, myinfo_button, redeem_button)
-    bot.reply_to(message, "𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 *𝗠𝗥𝗶𝗡 𝘅 𝗗𝗶𝗟𝗗𝗢𝗦™* 𝗯𝗼𝘁!", reply_markup=markup)
+    bot.reply_to(message, "𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 *𝗡𝗘𝗘𝗥𝗔𝗝 𝘅 𝗗𝗜𝗟𝗗𝗢𝗦™* 𝗯𝗼𝘁!", reply_markup=markup, parse_mode='Markdown')
 
 COOLDOWN_PERIOD = 60  # 1 minutes
 
